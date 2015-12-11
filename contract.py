@@ -422,14 +422,32 @@ class ContractLine(ModelSQL, ModelView):
             ('service.rec_name',) + tuple(clause[1:]),
             ]
 
-    @fields.depends('service', 'unit_price', 'description')
+    @fields.depends('service', 'unit_price', 'description', 'contract')
     def on_change_service(self):
+        Product = Pool().get('product.product')
+
         if self.service:
             self.name = self.service.rec_name
             if not self.unit_price:
                 self.unit_price = self.service.product.list_price
             if not self.description:
-                self.description = self.service.product.rec_name
+                lang = Transaction().context.get('language')
+                product = self.service.product
+
+                party_context = {}
+                if self.contract and self.contract.party:
+                    party = self.contract.party
+                    if party.lang:
+                        party_context['language'] = party.lang.code
+
+                    # reload product and change lang because
+                    # party lang and user lang are different
+                    if party_context.get('language') and \
+                            (lang != party_context['language']):
+                        with Transaction().set_context(party_context):
+                            self.description = Product(product.id).rec_name
+                if not self.description:
+                    self.description = product.rec_name
 
     @fields.depends('start_date', 'first_invoice_date')
     def on_change_start_date(self):
