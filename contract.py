@@ -815,7 +815,7 @@ class ContractConsumption(ModelSQL, ModelView):
 class CreateConsumptionsStart(ModelView):
     'Create Consumptions Start'
     __name__ = 'contract.create_consumptions.start'
-    date = fields.Date('Date')
+    date = fields.Date('Date', required=True)
 
     @staticmethod
     def default_date():

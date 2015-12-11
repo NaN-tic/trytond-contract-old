@@ -24,8 +24,7 @@ class InvoiceLine:
 class CreateInvoicesStart(ModelView):
     'Create Invoices Start'
     __name__ = 'contract.create_invoices.start'
-
-    date = fields.Date('Date')
+    date = fields.Date('Date', required=True)
 
     @staticmethod
     def default_date():
