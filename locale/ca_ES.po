@@ -1,4 +1,4 @@
-# 
+#
 msgid ""
 msgstr "Content-Type: text/plain; charset=utf-8\n"
 
@@ -278,17 +278,9 @@ msgctxt "field:contract.service,create_uid:"
 msgid "Create User"
 msgstr "Usuari creació"
 
-msgctxt "field:contract.service,freq:"
-msgid "Frequency"
-msgstr "Freqüència"
-
 msgctxt "field:contract.service,id:"
 msgid "ID"
 msgstr "ID"
-
-msgctxt "field:contract.service,interval:"
-msgid "Interval"
-msgstr "Interval"
 
 msgctxt "field:contract.service,name:"
 msgid "Name"
@@ -414,6 +406,10 @@ msgctxt "model:ir.action.act_window.domain,name:act_contract_domain_validated"
 msgid "Validated"
 msgstr "Validat"
 
+msgctxt "model:ir.cron,name:cron_contract"
+msgid "Contract Consumptions"
+msgstr "Consums de contractes"
+
 msgctxt "model:ir.sequence,name:sequence_contract"
 msgid "Contract"
 msgstr "Contracte"
@@ -466,6 +462,10 @@ msgctxt "model:res.group,name:group_contract_admin"
 msgid "Contract Administration"
 msgstr "Administració de contractes"
 
+msgctxt "model:res.user,name:user_cron_contract"
+msgid "Cron Contract"
+msgstr "Cron contracte"
+
 msgctxt "selection:contract,freq:"
 msgid "Daily"
 msgstr "Diàriament"
@@ -497,22 +497,6 @@ msgstr "Esborrany"
 msgctxt "selection:contract,state:"
 msgid "Validated"
 msgstr "Validat"
-
-msgctxt "selection:contract.service,freq:"
-msgid "Daily"
-msgstr "Diàriament"
-
-msgctxt "selection:contract.service,freq:"
-msgid "Monthly"
-msgstr "Mensualment"
-
-msgctxt "selection:contract.service,freq:"
-msgid "Weekly"
-msgstr "Setmanalment"
-
-msgctxt "selection:contract.service,freq:"
-msgid "Yearly"
-msgstr "Anualment"
 
 msgctxt "selection:party.party,contract_grouping_method:"
 msgid "Group contracts"
@@ -573,6 +557,10 @@ msgstr "Cancel·la"
 msgctxt "view:contract:"
 msgid "Contract"
 msgstr "Contracte"
+
+msgctxt "view:contract:"
+msgid "Create Consumptions"
+msgstr "Crea consums"
 
 msgctxt "view:contract:"
 msgid "Draft"

@@ -1,4 +1,4 @@
-# 
+#
 msgid ""
 msgstr "Content-Type: text/plain; charset=utf-8\n"
 
@@ -278,17 +278,9 @@ msgctxt "field:contract.service,create_uid:"
 msgid "Create User"
 msgstr "Usuario creación"
 
-msgctxt "field:contract.service,freq:"
-msgid "Frequency"
-msgstr "Frecuencia"
-
 msgctxt "field:contract.service,id:"
 msgid "ID"
 msgstr "ID"
-
-msgctxt "field:contract.service,interval:"
-msgid "Interval"
-msgstr "Intervalo"
 
 msgctxt "field:contract.service,name:"
 msgid "Name"
@@ -414,6 +406,10 @@ msgctxt "model:ir.action.act_window.domain,name:act_contract_domain_validated"
 msgid "Validated"
 msgstr "Válido"
 
+msgctxt "model:ir.cron,name:cron_contract"
+msgid "Contract Consumptions"
+msgstr "Consumos de contratos"
+
 msgctxt "model:ir.sequence,name:sequence_contract"
 msgid "Contract"
 msgstr "Contrato"
@@ -466,6 +462,10 @@ msgctxt "model:res.group,name:group_contract_admin"
 msgid "Contract Administration"
 msgstr "Administración de contratos"
 
+msgctxt "model:res.user,name:user_cron_contract"
+msgid "Cron Contract"
+msgstr "Cron contrato"
+
 msgctxt "selection:contract,freq:"
 msgid "Daily"
 msgstr "Diariamente"
@@ -497,26 +497,6 @@ msgstr "Borrador"
 msgctxt "selection:contract,state:"
 msgid "Validated"
 msgstr "Válido"
-
-msgctxt "selection:contract.service,freq:"
-msgid "Daily"
-msgstr "Diariamente"
-
-msgctxt "selection:contract.service,freq:"
-msgid "Monthly"
-msgstr "Mensualmente"
-
-msgctxt "selection:contract.service,freq:"
-msgid "None"
-msgstr "Ninguno"
-
-msgctxt "selection:contract.service,freq:"
-msgid "Weekly"
-msgstr "Semanalmente"
-
-msgctxt "selection:contract.service,freq:"
-msgid "Yearly"
-msgstr "Anualmente"
 
 msgctxt "selection:party.party,contract_grouping_method:"
 msgid "Group contracts"
@@ -577,6 +557,10 @@ msgstr "Cancelar"
 msgctxt "view:contract:"
 msgid "Contract"
 msgstr "Contrato"
+
+msgctxt "view:contract:"
+msgid "Create Consumptions"
+msgstr "Crear consumos"
 
 msgctxt "view:contract:"
 msgid "Draft"
