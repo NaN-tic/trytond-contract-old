@@ -77,6 +77,11 @@ class ContractService(ModelSQL, ModelView):
             ('type', '=', 'service'),
             ])
 
+    @fields.depends('product', 'name')
+    def on_change_product(self):
+        if not self.name:
+            self.name = self.product.rec_name
+
 _STATES = {
     'readonly': Eval('state') != 'draft',
     }
