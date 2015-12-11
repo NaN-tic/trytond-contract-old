@@ -142,6 +142,10 @@ class Contract(RRuleMixin, Workflow, ModelSQL, ModelView):
                     'invisible': Eval('state') != 'draft',
                     'icon': 'tryton-go-next',
                     },
+                'create_consumptions': {
+                    'invisible': Eval('state') != 'validated',
+                    'icon': 'tryton-ok',
+                    },
                 'cancel': {
                     'invisible': Eval('state') == 'cancel',
                     'icon': 'tryton-cancel',
@@ -265,6 +269,19 @@ class Contract(RRuleMixin, Workflow, ModelSQL, ModelView):
     @Workflow.transition('validated')
     def validate_contract(cls, contracts):
         cls.set_reference(contracts)
+
+    @classmethod
+    @ModelView.button
+    def create_consumptions(cls, contracts):
+        Date = Pool().get('ir.date')
+
+        validated = []
+        for c in contracts:
+            if c.state == 'validated' and c.freq != None:
+                validated.append(c)
+
+        if validated:
+            cls.consume(validated, Date.today())
 
     @classmethod
     @ModelView.button
