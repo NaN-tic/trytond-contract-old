@@ -770,6 +770,7 @@ class CreateConsumptions(Wizard):
         Contract = pool.get('contract')
         contracts = Contract.search([
                 ('state', '=', 'validated'),
+                ('freq', '!=', None),
                 ])
         consumptions = Contract.consume(contracts, self.start.date)
         data = {'res_id': [c.id for c in consumptions]}
