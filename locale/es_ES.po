@@ -252,7 +252,7 @@ msgstr "Secuencia"
 
 msgctxt "field:contract.line,service:"
 msgid "Service"
-msgstr "Servicios"
+msgstr "Servicio"
 
 msgctxt "field:contract.line,start_date:"
 msgid "Start Date"
