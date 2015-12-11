@@ -455,6 +455,14 @@ class ContractLine(ModelSQL, ModelView):
             ('service.rec_name',) + tuple(clause[1:]),
             ]
 
+    @classmethod
+    def copy(cls, lines, default=None):
+        if default is None:
+            default = {}
+        default = default.copy()
+        default['consumptions'] = None
+        return super(ContractLine, cls).copy(lines, default=default)
+
     @fields.depends('service', 'unit_price', 'description', 'contract')
     def on_change_service(self):
         Product = Pool().get('product.product')
