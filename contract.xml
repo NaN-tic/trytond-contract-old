@@ -26,6 +26,18 @@
             <field name="user" ref="res.user_trigger"/>
             <field name="group" ref="group_contract"/>
         </record>
+
+        <record model="res.user" id="user_cron_contract">
+            <field name="login">user_cron_internal_contract</field>
+            <field name="name">Cron Contract</field>
+            <field name="signature"></field>
+            <field name="active" eval="False"/>
+        </record>
+        <record model="res.user-res.group" id="user_contract_admin_group">
+            <field name="user" ref="user_cron_contract"/>
+            <field name="group" ref="group_contract_admin"/>
+        </record>
+
         <record model="ir.ui.view" id="contract_view_form">
             <field name="model">contract</field>
             <field name="type">form</field>
@@ -339,5 +351,19 @@
         <menuitem name="Create Invoices" parent="menu_contract"
             sequence="40" action="wizard_create_invoices"
             id="menu_create_invoices"/>
+
+        <!-- contract.cron -->
+        <record model="ir.cron" id="cron_contract">
+            <field name="name">Contract Consumptions</field>
+            <field name="request_user" ref="res.user_admin"/>
+            <field name="user" ref="user_cron_contract"/>
+            <field name="active" eval="True"/>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="number_calls">-1</field>
+            <field name="repeat_missed" eval="False"/>
+            <field name="model">contract</field>
+            <field name="function">generate_contract_consumptions</field>
+        </record>
     </data>
 </tryton>

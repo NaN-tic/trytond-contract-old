@@ -387,6 +387,17 @@ class Contract(RRuleMixin, Workflow, ModelSQL, ModelView):
 
         return ContractConsumption.create([c._save_values for c in to_create])
 
+    @classmethod
+    def generate_contract_consumptions(cls):
+        'Generate Contract Consumptions'
+        Date = Pool().get('ir.date')
+
+        contracts = cls.search([
+                ('state', '=', 'validated'),
+                ('freq', '!=', None),
+                ])
+        cls.consume(contracts, Date.today())
+
 
 class ContractLine(ModelSQL, ModelView):
     'Contract Line'
