@@ -20,6 +20,15 @@ from trytond.modules.product import price_digits
 __all__ = ['ContractService', 'Contract', 'ContractLine', 'RRuleMixin',
     'ContractConsumption', 'CreateConsumptionsStart', 'CreateConsumptions']
 
+_STATES = {
+    'readonly': Eval('state') != 'draft',
+    }
+_DEPENDS = ['state']
+
+
+def todatetime(date):
+    return datetime.datetime.combine(date, datetime.datetime.min.time())
+
 
 class RRuleMixin(Model):
     _rec_name = 'freq'
@@ -81,15 +90,6 @@ class ContractService(ModelSQL, ModelView):
     def on_change_product(self):
         if not self.name:
             self.name = self.product.rec_name
-
-_STATES = {
-    'readonly': Eval('state') != 'draft',
-    }
-_DEPENDS = ['state']
-
-
-def todatetime(date):
-    return datetime.datetime.combine(date, datetime.datetime.min.time())
 
 
 class Contract(RRuleMixin, Workflow, ModelSQL, ModelView):
