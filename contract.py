@@ -641,13 +641,8 @@ class ContractConsumption(ModelSQL, ModelView):
         InvoiceLine = pool.get('account.invoice.line')
         Property = pool.get('ir.property')
         Uom = pool.get('product.uom')
-
-        invoice_lines = InvoiceLine.search([
-            ('origin', '=', str(self)),
-            ])
-        if invoice_lines:
+        if self.invoice_lines:
             return
-
         invoice_line = InvoiceLine()
         invoice_line.type = 'line'
         invoice_line.origin = self
@@ -778,9 +773,8 @@ class ContractConsumption(ModelSQL, ModelView):
         lines = {}
         for consumption in consumptions:
             line = consumption.get_invoice_line()
-            if not line:
-                continue
-            lines[consumption.id] = line
+            if line:
+                lines[consumption.id] = line
 
         if not lines:
             return []
