@@ -641,7 +641,8 @@ class ContractConsumption(ModelSQL, ModelView):
         InvoiceLine = pool.get('account.invoice.line')
         Property = pool.get('ir.property')
         Uom = pool.get('product.uom')
-        if self.invoice_lines:
+        if (self.invoice_lines and
+                not Transaction().context.get('force_reinvoice', False)):
             return
         invoice_line = InvoiceLine()
         invoice_line.type = 'line'

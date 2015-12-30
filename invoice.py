@@ -101,12 +101,15 @@ class CreditInvoice:
         pool = Pool()
         Invoice = pool.get('account.invoice')
         Consumption = pool.get('contract.consumption')
+        transaction = Transaction()
 
         action, data = super(CreditInvoice, self).do_credit(action)
-        consumptions = set([])
-        for invoice in Invoice.browse(Transaction().context['active_ids']):
-            for line in invoice.lines:
-                if isinstance(line.origin, Consumption):
-                    consumptions.add(line.origin)
-        Consumption.invoice(list(consumptions))
+        if self.start.reinvoice_contract:
+            consumptions = set([])
+            for invoice in Invoice.browse(transaction.context['active_ids']):
+                for line in invoice.lines:
+                    if isinstance(line.origin, Consumption):
+                        consumptions.add(line.origin)
+            with transaction.set_context(force_reinvoice=True):
+                Consumption.invoice(list(consumptions))
         return action, data
