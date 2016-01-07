@@ -759,6 +759,9 @@ class ContractConsumption(ModelSQL, ModelView):
         # Compatibility with account_payment_type module
         if hasattr(Invoice, 'payment_type'):
             invoice.payment_type = invoice.party.customer_payment_type
+            # Compatibility with account_bank module
+            if invoice.payment_type and hasattr(Invoice, 'bank_account'):
+                invoice._get_bank_account()
         return invoice
 
     @classmethod
