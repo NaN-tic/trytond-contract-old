@@ -8,5 +8,7 @@
             yalign="0.0" xalign="0.0"/>
         <label name="date"/>
         <field name="date"/>
+        <label name="description"/>
+        <field name="description"/>
     </group>
 </form>

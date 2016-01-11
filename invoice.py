@@ -25,6 +25,7 @@ class CreateInvoicesStart(ModelView):
     'Create Invoices Start'
     __name__ = 'contract.create_invoices.start'
     date = fields.Date('Date', required=True)
+    description = fields.Char('Description')
 
     @staticmethod
     def default_date():
@@ -45,10 +46,12 @@ class CreateInvoices(Wizard):
 
     def do_create_invoices(self, action):
         pool = Pool()
+        Invoice = pool.get('account.invoice')
         Consumptions = pool.get('contract.consumption')
         consumptions = Consumptions.search(
             [('invoice_date', '<=', self.start.date)])
         invoices = Consumptions._invoice(consumptions)
+        Invoice.write(invoices, {'description': self.start.description})
 
         data = {'res_id': [c.id for c in invoices]}
         if len(invoices) == 1:
