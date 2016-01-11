@@ -198,6 +198,10 @@ msgctxt "field:contract.create_invoices.start,date:"
 msgid "Date"
 msgstr "Data"
 
+msgctxt "field:contract.create_invoices.start,description:"
+msgid "Description"
+msgstr "Descripció"
+
 msgctxt "field:contract.create_invoices.start,id:"
 msgid "ID"
 msgstr "Identificador"
