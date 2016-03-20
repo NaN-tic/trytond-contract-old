@@ -406,6 +406,10 @@ msgctxt "model:ir.action.act_window.domain,name:act_contract_domain_draft"
 msgid "Draft"
 msgstr "Borrador"
 
+msgctxt "model:ir.action.act_window.domain,name:act_contract_domain_finished"
+msgid "Finished"
+msgstr "Finalizado"
+
 msgctxt "model:ir.action.act_window.domain,name:act_contract_domain_validated"
 msgid "Validated"
 msgstr "Válido"
@@ -499,6 +503,10 @@ msgid "Draft"
 msgstr "Borrador"
 
 msgctxt "selection:contract,state:"
+msgid "Finished"
+msgstr "Finalizado"
+
+msgctxt "selection:contract,state:"
 msgid "Validated"
 msgstr "Válido"
 
@@ -569,6 +577,10 @@ msgstr "Crear consumos"
 msgctxt "view:contract:"
 msgid "Draft"
 msgstr "Borrador"
+
+msgctxt "view:contract:"
+msgid "Finish"
+msgstr "Finalizar"
 
 msgctxt "view:contract:"
 msgid "Invoice recurrence"

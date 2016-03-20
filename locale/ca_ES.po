@@ -406,6 +406,10 @@ msgctxt "model:ir.action.act_window.domain,name:act_contract_domain_draft"
 msgid "Draft"
 msgstr "Esborrany"
 
+msgctxt "model:ir.action.act_window.domain,name:act_contract_domain_finished"
+msgid "Finished"
+msgstr "Finalitzat"
+
 msgctxt "model:ir.action.act_window.domain,name:act_contract_domain_validated"
 msgid "Validated"
 msgstr "Validat"
@@ -499,6 +503,10 @@ msgid "Draft"
 msgstr "Esborrany"
 
 msgctxt "selection:contract,state:"
+msgid "Finished"
+msgstr "Finalitzat"
+
+msgctxt "selection:contract,state:"
 msgid "Validated"
 msgstr "Validat"
 
@@ -569,6 +577,10 @@ msgstr "Crea consums"
 msgctxt "view:contract:"
 msgid "Draft"
 msgstr "Esborrany"
+
+msgctxt "view:contract:"
+msgid "Finish"
+msgstr "Finalitza"
 
 msgctxt "view:contract:"
 msgid "Invoice recurrence"

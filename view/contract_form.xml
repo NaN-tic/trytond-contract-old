@@ -29,6 +29,7 @@
         <button name="draft" string="Draft"/>
         <button name="validate_contract" string="Validate"/>
         <button name="create_consumptions" string="Create Consumptions"/>
+        <button name="finish_contract" string="Finish"/>
         <button name="cancel" string="Cancel"/>
     </group>
 </form>
