@@ -8,11 +8,11 @@ from trytond.wizard import Wizard, StateView, StateAction, Button
 
 __all__ = ['InvoiceLine', 'CreateInvoicesStart', 'CreateInvoices',
     'CreditInvoiceStart', 'CreditInvoice']
-__metaclass__ = PoolMeta
 
 
 class InvoiceLine:
     __name__ = 'account.invoice.line'
+    __metaclass__ = PoolMeta
 
     @classmethod
     def _get_origin(cls):
@@ -61,6 +61,8 @@ class CreateInvoices(Wizard):
 
 class CreditInvoiceStart:
     __name__ = 'account.invoice.credit.start'
+    __metaclass__ = PoolMeta
+
     from_contract = fields.Boolean('From Contract', readonly=True)
     reinvoice_contract = fields.Boolean('Reinvoice Contract',
         states={
@@ -82,6 +84,7 @@ class CreditInvoiceStart:
 
 class CreditInvoice:
     __name__ = 'account.invoice.credit'
+    __metaclass__ = PoolMeta
 
     def default_start(self, fields):
         pool = Pool()
