@@ -42,7 +42,7 @@ class CreateInvoices(Wizard):
             Button('OK', 'create_invoices', 'tryton-ok', True),
             ])
     create_invoices = StateAction(
-            'account_invoice.act_invoice_out_invoice_form')
+            'account_invoice.act_invoice_out_form')
 
     def do_create_invoices(self, action):
         pool = Pool()

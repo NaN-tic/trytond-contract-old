@@ -707,7 +707,7 @@ class ContractConsumption(ModelSQL, ModelView):
                         'contract_line': self.contract_line.rec_name,
                         })
         invoice_line.taxes = taxes
-        invoice_line.invoice_type = 'out_invoice'
+        invoice_line.invoice_type = 'out'
         if self.end_period_date == self.init_period_date:
             quantity = 0.0
         else:

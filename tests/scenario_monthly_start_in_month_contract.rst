@@ -185,7 +185,7 @@ Invoice first consumed line::
     >>> invoices = consumption.click('invoice')
     >>> invoice = consumption.invoice_lines[0].invoice
     >>> invoice.type
-    u'out_invoice'
+    u'out'
     >>> invoice.party == party
     True
     >>> invoice.untaxed_amount
@@ -207,7 +207,7 @@ Invoice second consumed line::
     >>> invoices = consumption2.click('invoice')
     >>> invoice = consumption2.invoice_lines[0].invoice
     >>> invoice.type
-    u'out_invoice'
+    u'out'
     >>> invoice.party == party
     True
     >>> invoice.untaxed_amount

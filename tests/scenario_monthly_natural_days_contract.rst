@@ -158,7 +158,7 @@ Generate invoice for consumed lines::
     >>> invoices = consumption.click('invoice')
     >>> invoice = consumption.invoice_lines[0].invoice
     >>> invoice.type
-    u'out_invoice'
+    u'out'
     >>> invoice.party == party
     True
     >>> invoice.untaxed_amount
