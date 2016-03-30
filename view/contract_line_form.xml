@@ -12,8 +12,6 @@ this repository contains the full copyright notices and license terms. -->
     <field name="end_date"/>
     <label name="unit_price"/>
     <field name="unit_price"/>
-    <label name="first_invoice_date"/>
-    <field name="first_invoice_date"/>
     <label name="sequence"/>
     <field name="sequence"/>
     <separator name="description" colspan="4"/>

@@ -12,6 +12,9 @@
     <field name="currency"/>
     <label name="start_period_date"/>
     <field name="start_period_date"/>
+    <label name="first_invoice_date"/>
+    <field name="first_invoice_date"/>
+
     <label name="start_date"/>
     <field name="start_date"/>
     <label name="end_date"/>

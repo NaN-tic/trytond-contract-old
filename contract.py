@@ -109,6 +109,8 @@ class Contract(RRuleMixin, Workflow, ModelSQL, ModelView):
             'get_dates', searcher='search_dates')
     start_period_date = fields.Date('Start Period Date', required=True,
         states=_STATES, depends=_DEPENDS)
+    first_invoice_date = fields.Date('First Invoice Date', required=True)
+
     lines = fields.One2Many('contract.line', 'contract', 'Lines',
         states={
             'readonly': Eval('state') == 'cancel',
@@ -357,7 +359,7 @@ class Contract(RRuleMixin, Workflow, ModelSQL, ModelView):
             for date in self.rrule.between(todatetime(start), next_period):
                 date -= relativedelta(days=+1)
                 date = date.date()
-                invoice_date = last_invoice_date or line.first_invoice_date \
+                invoice_date = last_invoice_date or line.contract.first_invoice_date \
                     or date
                 if last_invoice_date:
                     invoice_date = self.get_invoice_date(last_invoice_date)
@@ -442,7 +444,6 @@ class ContractLine(ModelSQL, ModelView):
             'Last Invoice Date'), 'get_last_consumption_invoice_date')
     consumptions = fields.One2Many('contract.consumption', 'contract_line',
         'Consumptions', readonly=True)
-    first_invoice_date = fields.Date('First Invoice Date', required=True)
     sequence = fields.Integer('Sequence')
 
     @classmethod
@@ -503,10 +504,10 @@ class ContractLine(ModelSQL, ModelView):
                 if not self.description:
                     self.description = product.rec_name
 
-    @fields.depends('start_date', 'first_invoice_date')
-    def on_change_start_date(self):
-        if self.start_date and not self.first_invoice_date:
-            self.first_invoice_date = self.start_date
+    # @fields.depends('start_date', 'first_invoice_date')
+    # def on_change_start_date(self):
+    #     if self.start_date and not self.first_invoice_date:
+    #         self.first_invoice_date = self.start_date
 
     @classmethod
     def get_last_consumption_date(cls, lines, name):

@@ -118,9 +118,9 @@ Create two contract for grouped party::
     >>> contract.party = party
     >>> contract.start_period_date = datetime.date(today.year, 01, 01)
     >>> contract.freq = 'monthly'
+    >>> contract.first_invoice_date = datetime.date(today.year, 01, 31)
     >>> line = contract.lines.new()
     >>> line.start_date = datetime.date(today.year, 01, 01)
-    >>> line.first_invoice_date = datetime.date(today.year, 01, 31)
     >>> line.service = service
     >>> line.unit_price
     Decimal('40')
@@ -132,9 +132,9 @@ Create two contract for grouped party::
     >>> contract.start_period_date = datetime.date(today.year, 01, 01)
     >>> contract.start_date = datetime.date(today.year, 01, 01)
     >>> contract.freq = 'monthly'
+    >>> contract.first_invoice_date = datetime.date(today.year, 01, 31)
     >>> line = contract.lines.new()
     >>> line.start_date = datetime.date(today.year, 01, 01)
-    >>> line.first_invoice_date = datetime.date(today.year, 01, 31)
     >>> line.service = service
     >>> line.unit_price
     Decimal('40')
@@ -149,9 +149,9 @@ Create two contract for non grouped party::
     >>> contract.party = non_grouping_party
     >>> contract.start_period_date = datetime.date(today.year, 01, 01)
     >>> contract.freq = 'monthly'
+    >>> contract.first_invoice_date = datetime.date(today.year, 01, 31)
     >>> line = contract.lines.new()
     >>> line.start_date = datetime.date(today.year, 01, 01)
-    >>> line.first_invoice_date = datetime.date(today.year, 01, 31)
     >>> line.service = service
     >>> line.unit_price
     Decimal('40')
@@ -163,9 +163,9 @@ Create two contract for non grouped party::
     >>> contract.start_period_date = datetime.date(today.year, 01, 01)
     >>> contract.start_date = datetime.date(today.year, 01, 01)
     >>> contract.freq = 'monthly'
+    >>> contract.first_invoice_date = datetime.date(today.year, 01, 31)
     >>> line = contract.lines.new()
     >>> line.start_date = datetime.date(today.year, 01, 01)
-    >>> line.first_invoice_date = datetime.date(today.year, 01, 31)
     >>> line.service = service
     >>> line.unit_price
     Decimal('40')

@@ -123,9 +123,9 @@ Create a contract::
     >>> contract.party = party
     >>> contract.start_period_date = datetime.date(2015, 01, 01)
     >>> contract.freq = 'monthly'
+    >>> contract.first_invoice_date = datetime.date(2015, 01, 31)
     >>> line = contract.lines.new()
     >>> line.start_date = datetime.date(2015, 01, 01)
-    >>> line.first_invoice_date = datetime.date(2015, 01, 31)
     >>> line.service = service
     >>> line.unit_price
     Decimal('40')
