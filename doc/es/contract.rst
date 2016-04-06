@@ -33,12 +33,12 @@ Introducir un nuevo contrato
 ----------------------------
 Para introducir un nuevo contrato deberemos acceder a |menu_contratos| y
 clicar en *Nuevo*. En el formulario que se nos abrirá deberemos indicar un
-|party|, cuando empezará el periodo en |start_period_date| y la |freq| e
-|interval| con la que queremos que se generen las facturas. Estos dos últimos
-campos están relacionados entre sí: en |freq| indicaremos la periodicidad
-que queramos como base, y en |interval| cada cuanto del valor elegido en
-|freq| queremos que se genere la factura. Por ejemplo, si queremos que la
-factura se genere cada mes indicaremos:
+|party|, cuando empezará el periodo en |start_period_date|, la fecha de
+incio de factura en |first_date_inv| y la |freq| e |interval| con la que queremos
+que se generen las facturas. Estos dos últimos campos están relacionados entre sí:
+en |freq| indicaremos la periodicidad que queramos como base, y en |interval| cada
+cuanto del valor elegido en |freq| queremos que se genere la factura. Por ejemplo,
+si queremos que la factura se genere cada mes indicaremos:
 
 * |freq|: *Mensualmente*.
 * |interval|: *1*.
@@ -67,7 +67,7 @@ o también:
 Una vez rellenados los campos de la cabecera, tendremos que indicar las |lines|
 del contrato clicando en el icono *Nuevo* del propio campo. En la ventana que
 nos aparecerá deberemos indicar, al menos, |line_start_date|. Además si
-queremos, podremos definir la |first_date_inv|, así como  el |unit_price| y la
+queremos, podremos definir |unit_price| y la
 |description| que aparecerá en la factura cuando se genere. Además, si lo
 deseamos, podremos seleccionar una |end_date_line| de la línea, un producto del
 tipo servicio en |service|.
@@ -109,7 +109,7 @@ periodo pero solo una factura con dos líneas de factura.
 .. |party| field:: contract/party
 .. |start_period_date| field:: contract/start_period_date
 .. |start_date| field:: contract/start_date
-.. |first_date_inv| field:: contract.line/first_invoice_date
+.. |first_date_inv| field:: contract/first_invoice_date
 .. |end_date| field:: contract/end_date
 .. |freq| field:: contract/freq
 .. |interval| field:: contract/interval
