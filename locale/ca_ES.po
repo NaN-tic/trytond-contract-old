@@ -353,7 +353,7 @@ msgid "Consumptions"
 msgstr "Consums"
 
 msgctxt "model:ir.action,name:act_contract"
-msgid "Contract"
+msgid "Contracts"
 msgstr "Contractes"
 
 msgctxt "model:ir.action,name:act_contract_configuration_form"
@@ -361,16 +361,16 @@ msgid "Contracts Configuration"
 msgstr "Configuració de contractes"
 
 msgctxt "model:ir.action,name:act_contract_consumption"
-msgid "Contract Consumption"
-msgstr "Consum de contractes"
+msgid "Contract Consumptions"
+msgstr "Consums de contractes"
 
 msgctxt "model:ir.action,name:act_contract_line"
-msgid "Contract Line"
-msgstr "Línia de contracte"
+msgid "Contract Lines"
+msgstr "Línies de contractes"
 
 msgctxt "model:ir.action,name:act_contract_service"
 msgid "Contract Service"
-msgstr "Servei de contracte"
+msgstr "Serveis de contractes"
 
 msgctxt "model:ir.action,name:act_invoices"
 msgid "Invoices"
@@ -431,28 +431,28 @@ msgid "Configuration"
 msgstr "Configuració"
 
 msgctxt "model:ir.ui.menu,name:menu_contract"
-msgid "Contract"
-msgstr "Contracte"
+msgid "Contracts"
+msgstr "Contractes"
 
 msgctxt "model:ir.ui.menu,name:menu_contract_configuration"
 msgid "Contracts Configuration"
 msgstr "Configuració de contractes"
 
 msgctxt "model:ir.ui.menu,name:menu_contract_consumption"
-msgid "Contract Consumption"
-msgstr "Consum de contractes"
+msgid "Contract Consumptions"
+msgstr "Consums de contractes"
 
 msgctxt "model:ir.ui.menu,name:menu_contract_form"
-msgid "Contract"
-msgstr "Contracte"
+msgid "Contracts"
+msgstr "Contractes"
 
 msgctxt "model:ir.ui.menu,name:menu_contract_line_form"
-msgid "Contract Line"
+msgid "Contract Lines"
 msgstr "Línies"
 
 msgctxt "model:ir.ui.menu,name:menu_contract_service"
-msgid "Contract Service"
-msgstr "Servei de contracte"
+msgid "Contract Services"
+msgstr "Serveis de contracte"
 
 msgctxt "model:ir.ui.menu,name:menu_create_consumptions"
 msgid "Create Consumptions"
@@ -463,11 +463,11 @@ msgid "Create Invoices"
 msgstr "Crea factures"
 
 msgctxt "model:res.group,name:group_contract"
-msgid "Contract"
+msgid "Contracts"
 msgstr "Contractes"
 
 msgctxt "model:res.group,name:group_contract_admin"
-msgid "Contract Administration"
+msgid "Contracts Administration"
 msgstr "Administració de contractes"
 
 msgctxt "model:res.user,name:user_cron_contract"

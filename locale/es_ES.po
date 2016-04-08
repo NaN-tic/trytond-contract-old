@@ -353,7 +353,7 @@ msgid "Consumptions"
 msgstr "Consumos"
 
 msgctxt "model:ir.action,name:act_contract"
-msgid "Contract"
+msgid "Contracts"
 msgstr "Contratos"
 
 msgctxt "model:ir.action,name:act_contract_configuration_form"
@@ -361,16 +361,16 @@ msgid "Contracts Configuration"
 msgstr "Configuración de contratos"
 
 msgctxt "model:ir.action,name:act_contract_consumption"
-msgid "Contract Consumption"
+msgid "Contract Consumptions"
 msgstr "Consumos de contratos"
 
 msgctxt "model:ir.action,name:act_contract_line"
-msgid "Contract Line"
-msgstr "Línea de contrato"
+msgid "Contract Lines"
+msgstr "Líneas de contrato"
 
 msgctxt "model:ir.action,name:act_contract_service"
-msgid "Contract Service"
-msgstr "Servicio de contrato"
+msgid "Contract Services"
+msgstr "Servicios de contrato"
 
 msgctxt "model:ir.action,name:act_invoices"
 msgid "Invoices"
@@ -431,28 +431,28 @@ msgid "Configuration"
 msgstr "Configuración"
 
 msgctxt "model:ir.ui.menu,name:menu_contract"
-msgid "Contract"
-msgstr "Contrato"
+msgid "Contracts"
+msgstr "Contratos"
 
 msgctxt "model:ir.ui.menu,name:menu_contract_configuration"
 msgid "Contracts Configuration"
 msgstr "Configuración de contratos"
 
 msgctxt "model:ir.ui.menu,name:menu_contract_consumption"
-msgid "Contract Consumption"
+msgid "Contract Consumptions"
 msgstr "Consumos de contratos"
 
 msgctxt "model:ir.ui.menu,name:menu_contract_form"
-msgid "Contract"
+msgid "Contracts"
 msgstr "Contratos"
 
 msgctxt "model:ir.ui.menu,name:menu_contract_line_form"
-msgid "Contract Line"
+msgid "Contract Lines"
 msgstr "Líneas"
 
 msgctxt "model:ir.ui.menu,name:menu_contract_service"
-msgid "Contract Service"
-msgstr "Servicio de contrato"
+msgid "Contract Services"
+msgstr "Servicios de contrato"
 
 msgctxt "model:ir.ui.menu,name:menu_create_consumptions"
 msgid "Create Consumptions"

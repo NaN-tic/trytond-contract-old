@@ -5,7 +5,7 @@
     <data>
 
         <record model="res.group" id="group_contract_admin">
-            <field name="name">Contract Administration</field>
+            <field name="name">Contracts Administration</field>
         </record>
         <record model="res.user-res.group" id="user_admin_group_contract_admin">
             <field name="user" ref="res.user_admin"/>
@@ -16,7 +16,7 @@
             <field name="group" ref="group_contract_admin"/>
         </record>
         <record model="res.group" id="group_contract">
-            <field name="name">Contract</field>
+            <field name="name">Contracts</field>
         </record>
         <record model="res.user-res.group" id="user_admin_group_contract">
             <field name="user" ref="res.user_admin"/>
@@ -49,7 +49,7 @@
             <field name="name">contract_list</field>
         </record>
         <record model="ir.action.act_window" id="act_contract">
-            <field name="name">Contract</field>
+            <field name="name">Contracts</field>
             <field name="res_model">contract</field>
         </record>
         <record model="ir.action.act_window.view" id="act_contract_view1">
@@ -115,7 +115,7 @@
             <field name="name">contract_consumption_list</field>
         </record>
         <record model="ir.action.act_window" id="act_contract_consumption">
-            <field name="name">Contract Consumption</field>
+            <field name="name">Contract Consumptions</field>
             <field name="res_model">contract.consumption</field>
         </record>
         <record model="ir.action.act_window.view" id="act_contract_consumption_view1">
@@ -202,7 +202,7 @@
             <field name="name">contract_line_list</field>
         </record>
         <record model="ir.action.act_window" id="act_contract_line">
-            <field name="name">Contract Line</field>
+            <field name="name">Contract Lines</field>
             <field name="res_model">contract.line</field>
         </record>
         <record model="ir.action.act_window.view" id="act_contract_line_view1">
@@ -241,7 +241,7 @@
             <field name="name">contract_service_list</field>
         </record>
         <record model="ir.action.act_window" id="act_contract_service">
-            <field name="name">Contract Service</field>
+            <field name="name">Contract Services</field>
             <field name="res_model">contract.service</field>
         </record>
         <record model="ir.action.act_window.view" id="act_contract_service_view1">
@@ -317,7 +317,7 @@
             <field name="name">tryton-contract</field>
             <field name="path">icons/tryton-contract.svg</field>
         </record>
-        <menuitem id="menu_contract" name="Contract" icon="tryton-contract"/>
+        <menuitem id="menu_contract" name="Contracts" icon="tryton-contract"/>
 
         <record model="ir.ui.menu-res.group" id="menu_contract_group_contract">
             <field name="menu" ref="menu_contract"/>
@@ -350,21 +350,20 @@
         </record>
 
         <menuitem action="act_contract_service" id="menu_contract_service"
-          parent="menu_configuration" sequence="10" name="Contract Service"/>
+          parent="menu_configuration" sequence="10" name="Contract Services"/>
 
         <menuitem action="act_contract" id="menu_contract_form"
-            parent="menu_contract" sequence="20" name="Contract"/>
+            parent="menu_contract" sequence="20" name="Contracts"/>
 
         <menuitem action="act_contract_line" id="menu_contract_line_form"
             parent="menu_contract_form" sequence="10"/>
         <menuitem action="act_contract_consumption"
             id="menu_contract_consumption" parent="menu_contract"
-            sequence="30" name="Contract Consumption"/>
+            sequence="30" name="Contract Consumptions"/>
 
         <menuitem name="Create Consumptions" parent="menu_contract"
             sequence="40" action="wizard_create_consumptions"
             id="menu_create_consumptions"/>
-
 
         <menuitem name="Create Invoices" parent="menu_contract"
             sequence="40" action="wizard_create_invoices"
